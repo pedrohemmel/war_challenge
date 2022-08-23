@@ -9,67 +9,75 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            Image("logo")
-            Spacer()
+        
+        ZStack {
             
-            HStack {
-                Spacer()
-                Image("card3")
-                
-                Spacer()
-                
-                Image("card4")
-                Spacer()
-            }
-            
-            Spacer()
-            Image("dealbutton")
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-            Spacer()
+            Image("background")
+                .ignoresSafeArea()
             
             VStack {
-                HStack {
-                    Spacer()
-                    Text("Player")
-                        .font(.system(size: 26))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                    
-                    Spacer()
-                    
-                    Text("CPU")
-                        .font(.system(size: 26))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        
-                    Spacer()
-                }.padding()
+                Spacer()
+                Image("logo")
+                Spacer()
                 
                 HStack {
                     Spacer()
-                    Text("0")
-                        .font(.system(size: 26))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
+                    Image("card3")
                     
                     Spacer()
                     
-                    Text("0")
-                        .font(.system(size: 26))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
+                    Image("card4")
+                    Spacer()
+                }
+                
+                Spacer()
+                Image("dealbutton")
+                    .padding()
+                    .background(Color(red: 255 / 255, green: 160 / 255, blue: 25 / 255))
+                    .cornerRadius(10)
+                Spacer()
+                
+                HStack {
+                    
+                    VStack {
                         
-                    Spacer()
-                }.padding()
+                        Text("Player")
+                            .font(.system(size: 26))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            .padding([.bottom, .trailing, .leading], 10)
+                        
+                        Text("0")
+                            .font(.system(size: 26))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                        
+                        
+                    }
+                    
+                    VStack {
+                       
+                        
+                        Text("CPU")
+                            .font(.system(size: 26))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            .padding([.bottom, .trailing, .leading], 10)
+                        
+                        Text("0")
+                            .font(.system(size: 26))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            
+                    }
+                }
+                
+                Spacer()
             }
-            
-            
         }
-        .background(Color(red: 0 / 255, green: 154 / 255, blue: 80 / 255))
+        
+        
+        
     }
 }
 
